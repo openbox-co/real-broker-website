@@ -11,7 +11,6 @@ import Tour3D from "@/components/UI/Tour3D.astro";
 import Welcome from "@/components/UI/Welcome.astro";
 import { getLangFromUrl, useTranslations } from "@/utils/i18n";
 import { ViewTransitions } from "astro:transitions";
-import Card from "../../public/assets/images/card.webp";
 import ImageDivider from "../../public/assets/images/dividerbg.webp";
 import "../styles/global.css";
 const lang = getLangFromUrl(Astro.url);
@@ -29,6 +28,7 @@ const t = useTranslations(lang);
     />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="keywords" content="Club de Playa, Cana Bay Golf Course, Punta Cana, República Dominicana, Inversión en el Caribe, noval" />
     <meta
       property="og:image"
       content="https://poseidonia.gustavorealbroker.com/SEO.jpeg"
@@ -62,7 +62,7 @@ const t = useTranslations(lang);
         >
           <iframe
             width="768"
-            height="400"
+            height="420"
             src="https://www.youtube.com/embed/jPUvmUqLDqc"
             title="Poseidonia Video Tour"
             aria-label="Poseidonia Video Tour"
