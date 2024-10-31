@@ -1,6 +1,6 @@
 ---
-import FormSection from '@/components/react/FormSection';
-import Navbar from '@/components/react/Navbar';
+import FormSection from "@/components/react/FormSection";
+import Navbar from "@/components/react/Navbar";
 import Amenities from "@/components/UI/Amenities/Amenities.astro";
 import AmenitiesZone from "@/components/UI/Amenities/AmenitiesZone.astro";
 import ApartmentsSection from "@/components/UI/Apartments/ApartmentsSection.astro";
@@ -10,66 +10,92 @@ import Footer from "@/components/UI/Footer/Footer.astro";
 import Tour3D from "@/components/UI/Tour3D.astro";
 import Welcome from "@/components/UI/Welcome.astro";
 import { getLangFromUrl, useTranslations } from "@/utils/i18n";
-import { ViewTransitions } from 'astro:transitions';
+import { ViewTransitions } from "astro:transitions";
 import Card from "../../public/assets/images/card.webp";
 import ImageDivider from "../../public/assets/images/dividerbg.webp";
-import '../styles/global.css';
+import "../styles/global.css";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
 <html lang="es">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" title="favicon poseidonia" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<meta
-			property="og:image"
-			content="https://poseidonia.gustavorealbroker.com/SEO.jpeg"
-		/>
-		<title>Poseidonia Residences Cana Bay</title>
-		<meta
-			name="description"
-			content="Poseidonia Residences Cana Bay, la mejor inversión en Punta Cana, República Dominicana. Apartamentos en venta en el Caribe."
-		/>
-		<ViewTransitions transition:persist />
-	</head>
-	<body>
-		<Navbar url={Astro.url}  client:visible  />
-		<FormSection url={Astro.url} client:visible /> 
-	<section class='mt-20 md:mt-[180px]'> 
-			<Welcome t={t} />
-	</section> 
-			<Details t={t} />
-			<img src={ImageDivider.src} alt="ImageDivider" title="ImageDivider" class="w-full h-[320px] md:h-[460px] object-cover" />
-		<section class='rounded-tl-[40px] rounded-tr-[40px] bg-white absoluteBottom'>
-			<section class="absoluteHalf px-[30px]">
-				<div class="bg-grayBroker max-w-3xl mx-auto max-h-[500px] rounded-3xl overflow-hidden">
-					<img src={Card.src} alt="Card Image" title="Poseidonia video tour" class=" object-cover">
-				</div>
-			</section>
-		</section> 
-		<section class='absoluteBottomContent'>
-			<ApartmentsSection t={t}  />
-		</section> 
-		<Banner t={t} />
-		<Tour3D t={t} /> 
-		<Amenities />
-		<AmenitiesZone t={t} />
-		<section class='!rounded-bl-[40px] !rounded-br-[40px] bg-white absoluteFooter'>
-			<section class="absoluteFooterContent px-[30px]">
-				<iframe
-					title="map location of Poseidonia" 
-					class="mx-auto w-full lg:max-w-[840px] h-[420px] rounded-3xl"
-					src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15114.767986569062!2d-68.4862043!3d18.7226027!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ea8eb002e0700f1%3A0x4c72e1efd0ca297e!2sPoseidonia%20by%20Noval!5e0!3m2!1ses!2sco!4v1726272461169!5m2!1ses!2sco"
-					allowfullscreen=""
-					referrerpolicy="no-referrer-when-downgrade"
-					loading="lazy"
-				>
-				</iframe>
-			</section>
-		</section> 
-		<Footer t={t} />
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+      title="favicon poseidonia"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      property="og:image"
+      content="https://poseidonia.gustavorealbroker.com/SEO.jpeg"
+    />
+    <title>Poseidonia Residences Cana Bay</title>
+    <meta
+      name="description"
+      content="Poseidonia Residences Cana Bay, la mejor inversión en Punta Cana, República Dominicana. Apartamentos en venta en el Caribe."
+    />
+    <ViewTransitions transition:persist />
+  </head>
+  <body>
+    <Navbar url={Astro.url} client:visible />
+    <FormSection url={Astro.url} client:visible />
+    <section class="mt-20 md:mt-[180px]">
+      <Welcome t={t} />
+    </section>
+    <Details t={t} />
+    <img
+      src={ImageDivider.src}
+      alt="ImageDivider"
+      title="ImageDivider"
+      class="w-full h-[320px] md:h-[460px] object-cover"
+    />
+    <section
+      class="rounded-tl-[40px] rounded-tr-[40px] bg-white absoluteBottom"
+    >
+      <section class="absoluteHalf px-[30px]">
+        <div
+          class="bg-grayBroker max-w-3xl mx-auto max-h-[500px] rounded-3xl overflow-hidden"
+        >
+          <iframe
+            width="768"
+            height="400"
+            src="https://www.youtube.com/embed/jPUvmUqLDqc"
+            title="Poseidonia Video Tour"
+            aria-label="Poseidonia Video Tour"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            class="w-full"
+          >
+          </iframe>
+        </div>
+      </section>
+    </section>
+    <section class="absoluteBottomContent">
+      <ApartmentsSection t={t} />
+    </section>
+    <Banner t={t} />
+    <Tour3D t={t} />
+    <Amenities />
+    <AmenitiesZone t={t} />
+    <section
+      class="!rounded-bl-[40px] !rounded-br-[40px] bg-white absoluteFooter"
+    >
+      <section class="absoluteFooterContent px-[30px]">
+        <iframe
+          title="map location of Poseidonia"
+          class="mx-auto w-full lg:max-w-[840px] h-[420px] rounded-3xl"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15114.767986569062!2d-68.4862043!3d18.7226027!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ea8eb002e0700f1%3A0x4c72e1efd0ca297e!2sPoseidonia%20by%20Noval!5e0!3m2!1ses!2sco!4v1726272461169!5m2!1ses!2sco"
+          allowfullscreen=""
+          referrerpolicy="no-referrer-when-downgrade"
+          loading="lazy"
+        >
+        </iframe>
+      </section>
+    </section>
+    <Footer t={t} />
+  </body>
 </html>
