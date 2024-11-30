@@ -5,18 +5,34 @@ import Sponsor3 from "@/assets/Sponsor3.png";
 const { t } = Astro.props;
 ---
 
-<article class="flex flex-col-reverse md:flex-row justify-between w-full gap-y-10">
+<article
+  class="flex flex-col-reverse md:flex-row justify-between w-full gap-y-10"
+>
   <section class="flex justify-center items-center gap-4">
     <img src={Sponsor1.src} width={59} height={52} alt="AEI" title="AEI" />
-    <img src={Sponsor2.src} width={42} height={52} alt="Confederación Inmobiliaria Latinoamericana: CILA" title="Confederación Inmobiliaria Latinoamericana: CILA" />
-    <img src={Sponsor3.src} width={205} height={52} alt="National Association of Realtors | Real broker" title="National Association of Realtors | Real broker" />
+    <img
+      src={Sponsor2.src}
+      width={42}
+      height={52}
+      alt="Confederación Inmobiliaria Latinoamericana: CILA"
+      title="Confederación Inmobiliaria Latinoamericana: CILA"
+    />
+    <img
+      src={Sponsor3.src}
+      width={205}
+      height={52}
+      alt="National Association of Realtors | Real broker"
+      title="National Association of Realtors | Real broker"
+    />
   </section>
-  <section class="flex flex-col gap-y-1 font-primary text-white text-[14px] text-center md:text-right">
+  <section
+    class="flex flex-col gap-y-1 font-primary text-white text-[14px] text-center md:text-right"
+  >
     <p>
-      © Real Broker - {t('all_rights')}
+      © Real Broker - {t("all_rights")}
     </p>
-    <!-- <p class="font-semibold text-center lg:text-right">
-      {t('developed_by')}
-    </p> -->
+    <p class="font-semibold text-center lg:text-right">
+      © {t("developed_by")}
+    </p>
   </section>
 </article>

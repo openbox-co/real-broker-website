@@ -76,7 +76,7 @@ export const i18n = {
     footer_our_office: "Nuestra Oficina",
     footer_certified: "Certificados por",
     all_rights: "Todos los derechos reservados",
-    developed_by: "Diseñado y Desarrollado por Open Box",
+    developed_by: "To Perform - Por Open Box",
   },
   en: {
     //Form
@@ -146,6 +146,6 @@ export const i18n = {
     footer_our_office: "Our Office",
     footer_certified: "Certified by",
     all_rights: "All rights reserved",
-    developed_by: "Designed and Developed by Open Box",
+    developed_by: "To Perform - By Open Box",
   },
 };
